@@ -1,0 +1,24 @@
+{
+  "name": "spl-token-mint-ts",
+  "version": "1.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "devnet": "solana config set --url https://api.devnet.solana.com",
+    "mint:all": "ts-node src/mint_all_in_one.ts",
+    "mint:step:1": "ts-node src/01_create_mint.ts",
+    "mint:step:2": "ts-node src/02_create_ata.ts",
+    "mint:step:3": "ts-node src/03_mint_21m.ts",
+    "verify": "ts-node scripts/verify.ts",
+    "check": "ts-node scripts/check-balances.ts"
+  },
+  "dependencies": {
+    "@solana/spl-token": "^0.4.0",
+    "@solana/web3.js": "^1.95.3",
+    "dotenv": "^16.4.5"
+  },
+  "devDependencies": {
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}
